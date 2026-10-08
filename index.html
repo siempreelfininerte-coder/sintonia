@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sintonía — música para este momento</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f3ff;color:#28243a;font:16px system-ui,sans-serif}main{max-width:680px;margin:auto;padding:28px 18px 48px}.brand{color:#6d4bd1;font-weight:800;font-size:18px}h1{font-size:clamp(32px,8vw,48px);margin:12px 0 6px}p{line-height:1.55;color:#625d70}.card{background:white;border:1px solid #e8e2f2;border-radius:20px;padding:20px;margin:18px 0;box-shadow:0 8px 24px #33205a0b}h2{font-size:20px;margin:0 0 14px}.choices{display:flex;flex-wrap:wrap;gap:9px}button{font:inherit;cursor:pointer;border:1px solid #d9d2e6;background:#fff;color:#302b41;border-radius:999px;padding:11px 14px}button.sel{background:#6d4bd1;color:#fff;border-color:#6d4bd1}#go{width:100%;border:0;background:#6d4bd1;color:#fff;font-weight:750;padding:14px;border-radius:14px}#go:disabled{opacity:.45;cursor:not-allowed}.song{border-top:1px solid #eeeaf4;padding:14px 0}.song:first-of-type{border:0}.links{display:flex;gap:14px;margin-top:8px}.links a{color:#6042bd;font-weight:650;text-decoration:none}.note{font-size:13px;text-align:center;margin-top:22px}
+</style>
+</head>
+<body><main>
+<div class="brand">♫ Sintonía</div>
+<h1>Música para este momento</h1>
+<p>Cuéntanos cómo te sientes y cómo te gustaría sentirte después.</p>
+<section class="card"><h2>¿Cómo te sientes ahora?</h2><div class="choices">
+<button data-m="triste">😔 Triste</button><button data-m="ansiosa">😟 Con ansiedad</button><button data-m="cansada">😴 Cansada/o</button><button data-m="alegre">😊 Alegre</button><button data-m="nostalgica">🌙 Nostálgica/o</button><button data-m="enfoque">🧠 Distraída/o</button>
+</div></section>
+<section class="card"><h2>¿Cómo quieres sentirte después?</h2><div class="choices">
+<button data-g="calma">🌿 En calma</button><button data-g="animo">☀️ Con más ánimo</button><button data-g="enfoque">🎧 Concentrada/o</button><button data-g="compania">💜 Acompañada/o</button>
+</div></section>
+<button id="go" disabled>Ver recomendaciones</button><section id="out" aria-live="polite"></section>
+<p class="note">Tu ánimo no se guarda. Sintonía no reproduce ni aloja audio; abre búsquedas en Spotify o YouTube.</p>
+</main>
+<script>
+const tracks=[
+{m:'triste',g:'calma',n:'Soledad y el mar',a:'Natalia Lafourcade'},
+{m:'triste',g:'animo',n:'Brillas',a:'León Larregui'},
+{m:'triste',g:'compania',n:'Andar conmigo',a:'Julieta Venegas'},
+{m:'ansiosa',g:'calma',n:'Arrullo de Estrellas',a:'Zoé'},
+{m:'ansiosa',g:'compania',n:'Universos paralelos',a:'Jorge Drexler y Ana Tijoux'},
+{m:'ansiosa',g:'enfoque',n:'Azul',a:'Zoé'},
+{m:'cansada',g:'animo',n:'Limón y sal',a:'Julieta Venegas'},
+{m:'cansada',g:'calma',n:'Disfruto',a:'Carla Morrison'},
+{m:'cansada',g:'compania',n:'Eres',a:'Café Tacvba'},
+{m:'alegre',g:'animo',n:'Amárrame',a:'Mon Laferte y Juanes'},
+{m:'alegre',g:'compania',n:'Me 
